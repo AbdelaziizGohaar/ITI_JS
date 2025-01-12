@@ -16,8 +16,6 @@ const resetGame = () =>{
     keyboardDiv.querySelectorAll("button").forEach(btn =>btn.disabled = false) ;
     wordDisplay.innerHTML = currentword.split("").map(() =>'<li class="letter"></li>').join("");
     gameModal.classList.remove("show");
-
-
 }
 
 const getRandomWord = () => {
