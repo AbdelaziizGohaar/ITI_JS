@@ -23,6 +23,8 @@ var obj = {
 console.log(({}).toString());       //'This is an object'
 console.log(obj.toString());       //'This is a message'
 console.log(String(obj));        // 'This is a message'
-console.log(JSON.stringify(obj));    //{ message: 'This is a message' }
-
-
+//console.log(JSON.stringify(obj));    //{ message: 'This is a message' }
+var obj2 ={
+    message :"hello aziz",
+}
+console.log(obj2.toString());       //'This is an object'

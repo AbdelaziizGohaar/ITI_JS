@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HangMan Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/word-list.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+
+    <!-- Category Selection Section -->
+    <div class="game-category">
+        <h1>HangMan Game</h1>
+        <p>Select a category to start the game:</p>
+        <select id="category-select">
+            <option value="" disabled selected>Select Category</option>
+            <option value="Technology">Technology</option>
+            <option value="Nature">Nature</option>
+            <option value="Miscellaneous">Miscellaneous</option>
+            <option value="History">History</option>
+            <option value="Sports">Sports</option>
+        </select>
+        <button id="start-game-btn">Start Game</button>
+    </div>
+
+    <!-- Game Container -->
+    <div class="container" style="display: none;">
+        <div class="hangman-box">
+            <img src="images/hangman-0.svg" alt="Hangman Image">
+            <h1>HangMan Game</h1> <br><br><br>
+        </div>
+
+        <div class="game-box">
+            <ul class="word-display"></ul>
+            <h4 class="hint-text">
+                Hint: <b>Lorem ipsum, dolor sit amet consectetur?</b>
+            </h4>
+            <h4 class="guesses-text">
+                Incorrect Guesses: <b>0 / 6</b>
+                <p>Timing: <strong>10s</strong></p>
+            </h4>
+            <div class="keyboard"></div>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div class="game-modal">
+        <div class="content">
+            <img src="images/lost.gif" alt="Game Over GIF">
+            <h4>Game Over!!</h4>
+            <p>The correct answer was: <b>Rainbow</b></p>
+            <button class="play-again">Play Again</button>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,49 +1,52 @@
-/*
+// 1- You're tasked with modeling vehicles and cars in a transportation app:
+//     - A Vehicle has type and speed properties.
+//     - All vehicles can start and stop.
+//     - A Car inherits from Vehicle and has an additional drive method.
+//     a- Implement this using ES6 classes
+//      - Limit the number of Vehicle instances to 50. If an attempt is made to create the 51st vehicle, throw an error with the message: 'Vehicle limit reached'.
+//      - the implementation of the methods can be console.log only or you can leave them empty 
+//     b- Write a function that checks whether an object is an instance of Car using two different ways
 
-You're tasked with modeling vehicles and cars in a transportation app:
-    - A Vehicle has type and speed properties.
-    - All vehicles can start and stop.
-    - A Car inherits from Vehicle and has an additional drive method.
 
-    a- Implement this using ES5 function constructors
-     - Limit the number of Vehicle instances to 50. If an attempt is made to create the 51st vehicle, throw an error with the message: 'Vehicle limit reached'.
-     - the implementation of the methods can be console.log only or you can leave them empty 
-    b- Write a function that checks whether an object is an instance of Car using two different ways
+class Vehicle {
+    static instancescount = 0 ;
 
-*/
-
-let instanceCounter =0;
-function Vehicle(type, speed) { //function constructor
-    
-    instanceCounter++;
-
-    if (instanceCounter >= 50) {
-        throw new Error('Vehicle instance limit reached');
+    constructor(type , speed) {
+        this.speed = speed ;
+        this.type = type;
+        Vehicle.instancescount ++;
     }
-    this.speed = speed;
-    this.type = type;
-    
-    this.start = function() {               // create a method for each instance of the Vehicle object -- this ensure that each instance of Vehicle (or its subclasses) will have its own start method. Each object can call start() on its own.
-        console.log("Vehicle starting");
-    };
-    this.stop = function() {
-        console.log("Vehicle stoping");
-    };
-    
-}
-function Car(type, speed){
-    Vehicle.call(this,type,speed);
 
-    this.drive = function () {
-        console.log('Car driving');
+    checkInstance = function(){
+        if (instancescount >= 50) {
+            throw new Error('Vehicle limit reached');
+        }
     };
-    this.start = function() { //override
-        console.log("Car starting");
-    };
-    this.stop = function() {  //override
-        console.log("Car stoping");
-    };
+
+   start () {
+    console.log("Vehicle start");
+   }
+  stop () {
+    console.log("Vehicle start");
 }
+}
+
+class Car extends Vehicle{
+    constructor(type , speed) {
+        super(type , speed);
+    }
+
+  start () {
+    console.log("Vehicle start");
+}
+  stop () {
+    console.log("Vehicle start");
+}
+  drive () {
+    console.log("Vehicle start");
+}
+}
+
 
 function isCarInstance(obj) {
     const check1 = obj instanceof Car;                            //the instanceof operator to check if obj was created using the Car constructor or inherits from its prototype in run time
@@ -87,3 +90,4 @@ try {
 } catch (error) {
     console.error(error.message);
 }
+

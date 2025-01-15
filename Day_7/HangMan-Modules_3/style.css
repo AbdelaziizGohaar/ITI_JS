@@ -28,7 +28,7 @@ body{
 
 .hangman-box h1{
     font-size: 1.45rem;
-    margin-top: 20px;
+    margin-top: 5px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -178,4 +178,42 @@ font-weight: 600;
     }
    
        
+}
+
+.game-category h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: xx-large;
+}
+.game-category p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: larger;
+    font-style: oblique;
+    font-weight: 400;
+}
+
+.game-category button  {
+    color: #fff;
+    font-size: large;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: #000;
+    /* background: #FFD700; */
+    border-radius: 4px;
+    text-transform: uppercase;
+    padding: 7px;
+}
+.game-category select  {
+    color: #fff;
+    font-size: large;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: #000;
+    /* background: #FFD700; */
+    border-radius: 4px;
+    text-transform: uppercase;
+    padding: 7px;
 }
