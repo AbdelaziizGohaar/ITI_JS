@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.game-category {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#category-select {
+    padding: 10px;
+    font-size: 16px;
+}
+
+#start-game-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#start-game-btn:hover {
+    background-color: #218838;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hangman-box {
+    text-align: center;
+}
+
+.hangman-box img {
+    width: 200px;
+    height: auto;
+}

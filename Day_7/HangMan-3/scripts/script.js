@@ -1,4 +1,4 @@
-// Select DOM elements
+// Select DOM elements 
 const hangmanImage = document.querySelector(".hangman-box img");
 const wordDisplay = document.querySelector(".word-display");
 const guessesText = document.querySelector(".guesses-text b");

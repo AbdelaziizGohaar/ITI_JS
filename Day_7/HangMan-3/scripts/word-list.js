@@ -1,4 +1,4 @@
-const wordList = {
+const wordList = { 
   Technology: [
     { word: "algorithm", hint: "A step-by-step procedure for solving a problem" },
     { word: "computer", hint: "An electronic device for storing and processing data" },

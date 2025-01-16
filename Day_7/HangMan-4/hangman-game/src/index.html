@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HangMan Game</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script type="module" src="scripts/game.js" defer></script>
+</head>
+<body>
+
+    <!-- Category Selection Section -->
+    <div class="game-category">
+        <h1>HangMan Game</h1>
+        <p>Select a category to start the game:</p>
+        <select id="category-select">
+            <option value="" disabled selected>Select Category</option>
+            <option value="Technology">Technology</option>
+            <option value="Nature">Nature</option>
+            <option value="Miscellaneous">Miscellaneous</option>
+            <option value="History">History</option>
+            <option value="Sports">Sports</option>
+        </select>
+        <button id="start-game-btn">Start Game</button>
+    </div>
+
+    <!-- Game Container -->
+    <div class="container" style="display: none;">
+        <div class="hangman-box">
+            <img src="images/hangman-0.svg" alt="Hangman Image">
+            <h1>HangMan Game</h1> <br><br><br>
+        </div>
+    </div>
+
+</body>
+</html>
